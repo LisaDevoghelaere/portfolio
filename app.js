@@ -2,8 +2,7 @@ const circle = document.querySelector('.circle');
 const burger = document.querySelector('.burger');
 const close = document.querySelector('nav>p>a');
 // console.log(circle);
-
-document.addEventListener('mousemove', e => {
+document.addEventListener('mousemove', function(e) {
    circle.setAttribute('style', 'top:'+(e.pageY - 20)+"px; left:"+(e.pageX - 20)+"px;")
 });
 
