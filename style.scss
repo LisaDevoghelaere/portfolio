@@ -2,9 +2,7 @@
 
 body{
     background-color: black;
-    margin : 0;
-    overflow: hidden;
-    
+    margin : 0;  
     font-family: $body-txt-family;
     color: white;
     .container{
@@ -26,7 +24,24 @@ h1{
         color : white;
     }
 }
+h2{
+    font-family: $titles-family;
+    color: $yellow;
+    font-size: $size36;
 
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-family: $titles-family;
+    font-weight: $bold;
+}
+li{
+    list-style: none;
+    text-align: center;
+    line-height: 3;
+    font-family: $titles-family;
+}
 .building{
     background-image: url(media/header-desk.png);
     background-repeat: no-repeat;
@@ -44,12 +59,13 @@ h1{
     align-self: center;
 
 }
+
 /*------------Circle Mouse---------------*/
 .circle {
+    z-index: 99;
     width: 300px;
     height: 300px;
-    background-color: white;
-    border-radius: 50%;
+    background-image: url(media/cercle.png);
     pointer-events: none;
     position: absolute;
     mix-blend-mode: difference;
@@ -75,32 +91,93 @@ h1{
 /*le menu caché*/
 nav{
     position : absolute;
-    width: 180px;
-    height: 100vh;
+    width: 100vw;
+    height: 0;
     background-color: black;
     top : 0;
-    right : -200px;
-    transition : right .600s ease-in-out;
+    right : 1px;
+    transition : height .600s ease-in-out;
+    overflow: hidden;
     p{
+        box-sizing: border-box;
+        width: 100%;
         font-family: $titles-family;
         font-weight: $black;
-        font-size: 1.5rem;
+        font-size: 3rem;
         text-align: right;
         margin-right: 1rem;
-        a{
-            color: white;
-            text-decoration: none;
-
-        }
+        padding-right: 2rem;
+    }
+    ul{
+        box-sizing: border-box;
+        width: 100%;
+        font-family: $titles-family;
+        font-weight: $black;
+        font-size: $size64;
     }
 }
 nav.show{
-    right : 0;
-    transition : right .600s ease-in-out;
+    height : 100vh;
+    transition : height .600s ease-in-out;
 }
-li{
-    list-style: none;
-    text-align: center;
-    line-height: 3;
-    font-family: $titles-family;
+#qui-suis-je{
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+.about{
+    width: 50%;
+    padding: 1rem;;
+}
+.flex-competence{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+.photo{
+    background-image: url(media/autoportrait-masque.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 50%;
+    height : 100%;
+}
+.competence-web{
+    width: 0;
+    height : auto;
+    margin : 0;
+    background-color: $transparent-black;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: width .600s ease-in-out;
+    i{
+        font-size: 3.5rem;
+        padding: 1rem;
+    }
+}
+.show-web{
+    width : 100%;
+    transition : width .600s ease-in-out;
+}
+.vagrant{
+    padding: 1rem;
+}
+.competence-design{
+    width: 0;
+    height : auto;
+    margin : 0;
+    background-color: $transparent-black;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    transition: width .600s ease-in-out;
+}
+.show-design{
+    width : 100%;
+    transition : width .600s ease-in-out;
 }

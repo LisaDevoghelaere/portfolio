@@ -19,8 +19,6 @@
         <nav>
             <p><a href="#">X</a></p>
             <ul>
-                <li>Compétences Web</li>
-                <li>Compétences Graphiques</li>
                 <li>Qui suis-je ?</li>
                 <li>Projets</li>
                 <li>Contacts</li>
@@ -39,46 +37,66 @@
     </header>
     <main class="container">
         <section id="qui-suis-je">
-            <h2>Qui-suis-je?</h2>
-            <p>Curieuse du monde qui m'entoure, je me suis reconvertie vers les métiers de développeuse web et design pour satisfaire mon besoin d'en apprendre toujours plus.</p>
-            <a href="#">Compétences Web</a>
-            <div class="competences-web">
-                <p><i class="fab fa-html5"></i></p>
-                <p><i class="fab fa-css3-alt"></i></p>
-                <p><i class="fab fa-php"></i></p>
-                <p><i class="fab fa-sass"></i></p>
-                <p><i class="fab fa-js-square"></i></p>
-                <p><i class="fab fa-git-alt"></i></p>
-                <p><i class="fab fa-bootstrap"></i></p>
-                <p><i class="fab fa-wordpress"></i></p>
-                <p><img src="" alt="mysql"></p>
-                <p><img src="" alt="vagrant"></p>
-                <p><img src="" alt="wamp"></p>
+            <div class="about">
+                <h2>Qui-suis-je?</h2>
+                <p>Curieuse du monde qui m'entoure, je me suis reconvertie vers les métiers de développeuse web et design pour satisfaire mon besoin d'en apprendre toujours plus.</p>
+                <div class="flex-competence">
+                    <h3 class="btn-web"><a href="#">Compétences Web</a></h3>
+                    <h3 class="btn-design"><a href="#">Compétences Design</a></h3>
+                    
+                </div>
             </div>
-            <a href="#">Compétences Design</a>
-            <div class="competence-design">
-                <p><img src="" alt="photoshop"></p>
-                <p><img src="" alt="indesign"></p>
-                <p><img src="" alt="illustrator"></p>
-                <p><img src="" alt="lightroom"></p>
-                <p><img src="" alt="xd"></p>
-                <p><img src="" alt="figma"></p>
-            </div>
-            <a href="#">Contact</a>
-            <div class="contact">
-                <form action="">
-                    <input type="text">
-                    <input type="text">
-                    <input type="textarea">
-                    <button>Envoyer</button>
-                </form>
-            </div>
+            <div class="photo">
+                
+                    <div class="competence-web">
+                        <p><i class="fab fa-html5"></i></p>
+                        <p><i class="fab fa-css3-alt"></i></p>
+                        <p><i class="fab fa-php"></i></p>
+                        <p><i class="fab fa-sass"></i></p>
+                        <p><i class="fab fa-js-square"></i></p>
+                        <p><i class="fab fa-git-alt"></i></p>
+                        <p><i class="fab fa-bootstrap"></i></p>
+                        <p><i class="fab fa-wordpress"></i></p>
+                        <p><img src="media/mysql-logo.png" alt="mysql"></p>
+                        <p><img class="vagrant" src="media/vagrant-logo.png" alt="vagrant"></p>
+                    </div>
+                   
+                    <div class="competence-design">
+                        <p><img src="" alt="photoshop"></p>
+                        <p><img src="" alt="indesign"></p>
+                        <p><img src="" alt="illustrator"></p>
+                        <p><img src="" alt="lightroom"></p>
+                        <p><img src="" alt="xd"></p>
+                        <p><img src="" alt="figma"></p>
+                    </div>
+                
+            </div>           
         </section>
         <section id="projets">
             <h2>Projets</h2>
             <h3>Web</h3>
-            <h3>Design</h3>
+            <h3>Print</h3>
             
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <div class="contact">
+                <form action="">
+                    <div>
+                        <label for="name">Nom :</label>
+                        <input type="text" id="name" name="user_name">
+                    </div>
+                    <div>
+                        <label for="e-mail">E-mail :</label>
+                        <input type="email" id="mail" name="user_email">
+                    </div>
+                    <div>
+                        <label for="msg">Message :</label>
+                        <textarea id="msg" name="user_message" cols="30" rows="10"></textarea>
+                    </div>
+                    <button>Envoyer</button>
+                </form>
+            </div>
         </section>
         
     </main>
