@@ -28,6 +28,8 @@ btnWeb.addEventListener('click', function(e){
    e.preventDefault();
    const competenceWeb = document.querySelector('.competence-web');
    competenceWeb.classList.toggle('show-web');
+   const competenceDesign = document.querySelector('.show-design');
+   competenceDesign.classList.remove('show-design');
 });
 
 const btnDesign = document.querySelector('.btn-design');
@@ -35,4 +37,8 @@ btnDesign.addEventListener('click', function(e){
    e.preventDefault();
    const competenceDesign = document.querySelector('.competence-design');
    competenceDesign.classList.toggle('show-design');
+
+   const competenceWeb = document.querySelector('.show-web');
+   competenceWeb.classList.remove('show-web');
+
 });

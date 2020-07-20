@@ -158,6 +158,7 @@ nav.show {
   transition: height .600s ease-in-out;
 }
 
+/*-------------------------------A Propos-------------------------------*/
 #qui-suis-je {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,9 +168,9 @@ nav.show {
           justify-content: space-between;
   -ms-flex-line-pack: start;
       align-content: flex-start;
+  margin-top: 10%;
 }
 
-/*-------------------------------A Propos-------------------------------*/
 .about {
   width: 50%;
   padding: 1rem;
@@ -190,7 +191,7 @@ nav.show {
   background-image: url(media/autoportrait-masque.jpg);
   background-size: 50%;
   background-repeat: no-repeat;
-  background-position-x: right;
+  background-position-x: left;
   width: 50%;
 }
 
@@ -239,7 +240,7 @@ nav.show {
 
 .show-web, .show-design {
   width: 100%;
-  height: 80%;
+  height: 100%;
   -webkit-transition: width .600s ease-in-out, height .600s ease-in-out;
   transition: width .600s ease-in-out, height .600s ease-in-out;
 }
@@ -248,5 +249,53 @@ nav.show {
   padding: 1rem;
 }
 
+.btn-web, .btn-design {
+  padding: 0.5rem;
+  border: 2px solid white;
+}
+
+.btn-web:hover, .btn-design:hover {
+  background-color: white;
+  color: black;
+}
+
 /*---------------------------Projet------------------------------*/
+#projets {
+  margin-top: 10%;
+}
+
+#projets h2 {
+  text-align: center;
+}
+
+/*---------------------------Contact------------------------------*/
+label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+input, textarea {
+  padding: 0.5rem;
+  background-color: #1f1f1f;
+  border: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  width: 80%;
+}
+
+form {
+  margin: auto;
+}
+
+form button {
+  padding: 0.5rem;
+  background-color: #FFAC0A;
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  width: 81%;
+  cursor: pointer;
+}
 /*# sourceMappingURL=style.css.map */
