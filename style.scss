@@ -1,10 +1,12 @@
 @import 'sass-modules/variables.scss';
 
+/*-----------------Base-------------------------*/
 body{
     background-color: black;
     margin : 0;  
     font-family: $body-txt-family;
     color: white;
+    overflow-x: hidden;
     .container{
         max-width: 1280px;
         margin: auto; 
@@ -42,6 +44,7 @@ li{
     line-height: 3;
     font-family: $titles-family;
 }
+/*---------------------Header---------------------------*/
 .building{
     background-image: url(media/header-desk.png);
     background-repeat: no-repeat;
@@ -125,6 +128,7 @@ nav.show{
     justify-content: space-between;
     align-content: flex-start;
 }
+/*-------------------------------A Propos-------------------------------*/
 .about{
     width: 50%;
     padding: 1rem;;
@@ -136,15 +140,14 @@ nav.show{
 }
 .photo{
     background-image: url(media/autoportrait-masque.jpg);
-    background-size: contain;
+    background-size: 50%;
     background-repeat: no-repeat;
-    background-position: right;
-    width: 50%;
-    height : 100%;
+    background-position-x: right;
+   width : 50%;
 }
 .competence-web{
     width: 0;
-    height : auto;
+    height : 0;
     margin : 0;
     background-color: $transparent-black;
     display: flex;
@@ -152,22 +155,15 @@ nav.show{
     align-content: center;
     flex-wrap: wrap;
     overflow: hidden;
-    transition: width .600s ease-in-out;
+    transition: width .600s ease-in-out, height .600s ease-in-out;
     i{
         font-size: 3.5rem;
         padding: 1rem;
     }
 }
-.show-web{
-    width : 100%;
-    transition : width .600s ease-in-out;
-}
-.vagrant{
-    padding: 1rem;
-}
 .competence-design{
     width: 0;
-    height : auto;
+    height : 0;
     margin : 0;
     background-color: $transparent-black;
     display: flex;
@@ -175,9 +171,14 @@ nav.show{
     align-content: center;
     flex-wrap: wrap;
     overflow: hidden;
-    transition: width .600s ease-in-out;
+    transition: width .600s ease-in-out, height .600s ease-in-out;
 }
-.show-design{
+.show-web, .show-design{
     width : 100%;
-    transition : width .600s ease-in-out;
+    height : 80%;
+    transition : width .600s ease-in-out, height .600s ease-in-out;
 }
+.vagrant{
+    padding: 1rem;
+}
+/*---------------------------Projet------------------------------*/

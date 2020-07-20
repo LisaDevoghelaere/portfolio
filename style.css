@@ -4,11 +4,13 @@
 /*Font*/
 /*weight*/
 /*------SIZE------*/
+/*-----------------Base-------------------------*/
 body {
   background-color: black;
   margin: 0;
   font-family: "Merriweather", serif;
   color: white;
+  overflow-x: hidden;
 }
 
 body .container {
@@ -52,6 +54,7 @@ li {
   font-family: "Montserrat", sans-serif;
 }
 
+/*---------------------Header---------------------------*/
 .building {
   background-image: url(media/header-desk.png);
   background-repeat: no-repeat;
@@ -166,6 +169,7 @@ nav.show {
       align-content: flex-start;
 }
 
+/*-------------------------------A Propos-------------------------------*/
 .about {
   width: 50%;
   padding: 1rem;
@@ -184,16 +188,15 @@ nav.show {
 
 .photo {
   background-image: url(media/autoportrait-masque.jpg);
-  background-size: contain;
+  background-size: 50%;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position-x: right;
   width: 50%;
-  height: 100%;
 }
 
 .competence-web {
   width: 0;
-  height: auto;
+  height: 0;
   margin: 0;
   background-color: rgba(0, 0, 0, 0.836);
   display: -webkit-box;
@@ -206,8 +209,8 @@ nav.show {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow: hidden;
-  -webkit-transition: width .600s ease-in-out;
-  transition: width .600s ease-in-out;
+  -webkit-transition: width .600s ease-in-out, height .600s ease-in-out;
+  transition: width .600s ease-in-out, height .600s ease-in-out;
 }
 
 .competence-web i {
@@ -215,19 +218,9 @@ nav.show {
   padding: 1rem;
 }
 
-.show-web {
-  width: 100%;
-  -webkit-transition: width .600s ease-in-out;
-  transition: width .600s ease-in-out;
-}
-
-.vagrant {
-  padding: 1rem;
-}
-
 .competence-design {
   width: 0;
-  height: auto;
+  height: 0;
   margin: 0;
   background-color: rgba(0, 0, 0, 0.836);
   display: -webkit-box;
@@ -240,13 +233,20 @@ nav.show {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   overflow: hidden;
-  -webkit-transition: width .600s ease-in-out;
-  transition: width .600s ease-in-out;
+  -webkit-transition: width .600s ease-in-out, height .600s ease-in-out;
+  transition: width .600s ease-in-out, height .600s ease-in-out;
 }
 
-.show-design {
+.show-web, .show-design {
   width: 100%;
-  -webkit-transition: width .600s ease-in-out;
-  transition: width .600s ease-in-out;
+  height: 80%;
+  -webkit-transition: width .600s ease-in-out, height .600s ease-in-out;
+  transition: width .600s ease-in-out, height .600s ease-in-out;
 }
+
+.vagrant {
+  padding: 1rem;
+}
+
+/*---------------------------Projet------------------------------*/
 /*# sourceMappingURL=style.css.map */
