@@ -9,100 +9,98 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="circle"></div>
-    <header class="container">
-        <div class="upper-bar">
-            <!--logo + barre nav-->
-            <div class="logo"></div>
-            <p><a href="#" class="burger"><i class="fas fa-bars"></i></a></p>
+  <div class="circle"></div>
+  <header class="container">
+    <div class="upper-bar">
+      <!--logo + barre nav-->
+      <div class="logo"></div>
+      <p><a href="#" class="burger"><i class="fas fa-bars"></i></a></p>
+    </div>
+    <nav>
+      <p><a href="#">X</a></p>
+      <ul>
+        <li>Qui suis-je ?</li>
+        <li>Projets</li>
+        <li>Contacts</li>
+      </ul>
+    </nav>
+    <div  class="building">
+      <div class="window"></div>
+      <div class="window"></div>
+      <!--visuel d'accueil-->
+      <div class="transparent-block">
+          <h1>Lisa Devoghelaere <br> <span>PORTFOLIO</span> <br> Web & Design</h1>
+      </div>
+    </div>       
+  </header>
+  <main class="container">
+    <section id="qui-suis-je">
+      <div class="photo">      
+        <div class="competence-web">
+          <p><i class="fab fa-html5"></i></p>
+          <p><i class="fab fa-css3-alt"></i></p>
+          <p><i class="fab fa-php"></i></p>
+          <p><i class="fab fa-sass"></i></p>
+          <p><i class="fab fa-js-square"></i></p>
+          <p><i class="fab fa-git-alt"></i></p>
+          <p><i class="fab fa-bootstrap"></i></p>
+          <p><i class="fab fa-wordpress"></i></p>
+          <p><img src="media/mysql-logo.png" alt="mysql"></p>
+          <p><img class="vagrant" src="media/vagrant-logo.png" alt="vagrant"></p>
+        </div>              
+        <div class="competence-design">
+          <p><img src="media/photoshop.png" alt="photoshop"></p>
+          <p><img src="media/indesign.png" alt="indesign"></p>
+          <p><img src="media/illustrator.png" alt="illustrator"></p>
+          <p><img src="media/adobe-lightroom.png" alt="lightroom"></p>
+          <p><img src="media/adobe-xd-logo.png" alt="xd"></p>
+          <p><img src="media/figma.png" alt="figma"></p>
+        </div> 
+      </div>         
+      <div class="about">
+        <h2>Qui-suis-je?</h2>
+        <p>Curieuse du monde qui m'entoure, je me suis reconvertie vers les métiers de développeuse web et design pour satisfaire mon besoin d'en apprendre toujours plus.</p>
+        <div class="flex-competence">
+          <h3><a href="#" class="btn-web">Compétences Web</a></h3>
+          <h3><a href="#" class="btn-design">Compétences Design</a></h3>           
         </div>
-        <nav>
-            <p><a href="#">X</a></p>
-            <ul>
-                <li>Qui suis-je ?</li>
-                <li>Projets</li>
-                <li>Contacts</li>
-            </ul>
-        </nav>
-        <div  class="building">
-            <div class="window"></div>
-            <div class="window"></div>
-            <!--visuel d'accueil-->
-            <div class="transparent-block">
-                <h1>Lisa Devoghelaere <br> <span>PORTFOLIO</span> <br> Web & Design</h1>
-            </div>
-
-        </div>
-       
-    </header>
-    <main class="container">
-        <section id="qui-suis-je">
-            <div class="photo">
-                
-                <div class="competence-web">
-                    <p><i class="fab fa-html5"></i></p>
-                    <p><i class="fab fa-css3-alt"></i></p>
-                    <p><i class="fab fa-php"></i></p>
-                    <p><i class="fab fa-sass"></i></p>
-                    <p><i class="fab fa-js-square"></i></p>
-                    <p><i class="fab fa-git-alt"></i></p>
-                    <p><i class="fab fa-bootstrap"></i></p>
-                    <p><i class="fab fa-wordpress"></i></p>
-                    <p><img src="media/mysql-logo.png" alt="mysql"></p>
-                    <p><img class="vagrant" src="media/vagrant-logo.png" alt="vagrant"></p>
-                </div>              
-                <div class="competence-design">
-                    <p><img src="media/photoshop.png" alt="photoshop"></p>
-                    <p><img src="media/indesign.png" alt="indesign"></p>
-                    <p><img src="media/illustrator.png" alt="illustrator"></p>
-                    <p><img src="media/adobe-lightroom.png" alt="lightroom"></p>
-                    <p><img src="media/adobe-xd-logo.png" alt="xd"></p>
-                    <p><img src="media/figma.png" alt="figma"></p>
-                </div> 
-            </div>         
-            <div class="about">
-                <h2>Qui-suis-je?</h2>
-                <p>Curieuse du monde qui m'entoure, je me suis reconvertie vers les métiers de développeuse web et design pour satisfaire mon besoin d'en apprendre toujours plus.</p>
-                <div class="flex-competence">
-                    <h3><a href="#" class="btn-web">Compétences Web</a></h3>
-                    <h3><a href="#" class="btn-design">Compétences Design</a></h3>
-                    
-                </div>
-            </div>
-                   
-        </section>
-        <section id="projets">
-            <h2>Projets</h2>
-            <div id="myBtnContainer">
-                <button class="btn active" onclick="filterSelection('all')"> Tout</button>
-                <button class="btn" onclick="filterSelection('web-filter')"> Web</button>
-                <button class="btn" onclick="filterSelection('print-filter')"> Print</button>
-            </div>  
-        </section>
-        <section>
-            <h2>Contact</h2>
-            <div class="contact">
-                <form action="form.php">
-                    <div>
-                        <p><label for="name">Nom :</label></p>
-                        <input type="text" id="name" name="user_name">
-                    </div>
-                    <div>
-                        <p><label id="e-mail">E-mail :</label></p>
-                        <input type="email" id="mail" name="user_email">
-                    </div>
-                    <div>
-                        <p><label for="msg">Message :</label></p>
-                        <textarea id="msg" name="user_message" rows="10"></textarea>
-                    </div>
-                    <button>Envoyer</button>
-                </form>
-            </div>
-        </section>
+      </div>               
+    </section>
+  <section id="projets">
+    <h2>Projets</h2>
+    <div id="btn-container">
+      <a href="#" class="btn">Tout</a>
+      <a href="#" class="btn">Web</a>
+      <a href="#" class="btn">Print</a>                
+    </div>
+    <div id="portfolio_container">
+      
+    </div>
+  </section>
+  <section>
+    <h2>Contact</h2>
+      <div class="contact">
+          <form action="form.php" method="post">
+              <div>
+                <p><label for="name">Nom :</label></p>
+                <input type="text" id="name" name="user_name">
+              </div>
+              <div>
+                <p><label id="e-mail">E-mail :</label></p>
+                <input type="email" id="mail" name="user_email">
+              </div>
+              <div>
+                  <p><label for="msg">Message :</label></p>
+                  <textarea id="msg" name="user_message" rows="10"></textarea>
+              </div>
+              <button>Envoyer</button>
+          </form>
+    </div>
+  </section>
         
-    </main>
-    <footer></footer>
-    <script src="https://kit.fontawesome.com/5458cc12a8.js" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+</main>
+<footer></footer>
+  <script src="https://kit.fontawesome.com/5458cc12a8.js" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
 </body>
 </html>
