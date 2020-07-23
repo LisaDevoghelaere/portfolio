@@ -50,7 +50,6 @@ a {
 li {
   list-style: none;
   text-align: center;
-  line-height: 3;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -156,6 +155,10 @@ nav ul {
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
   font-size: 4rem;
+}
+
+nav ul li {
+  line-height: 3;
 }
 
 nav.show {
@@ -308,59 +311,24 @@ nav.show {
   color: black;
 }
 
-/* Style affichage projets */
-#dashboard, #multiplication, #chess_castle, #collage {
-  display: block;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position-x: left;
-  width: 35rem;
-  height: 30rem;
+/*affichage gallerie*/
+.portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-#girafe, #fete-de-la-musique, #fete-du-livre, #futura, #rechauffement-climatique {
-  display: block;
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-position-x: left;
-  width: 35rem;
-  height: 30rem;
-}
-
-#dashboard {
-  background-image: url(media/screenshot_dashboard.png);
-}
-
-#multiplication {
-  background-image: url(media/screenshot_multiplication.png);
-}
-
-#chess_castle {
-  background-image: url(media/chess-castle.jpg);
-}
-
-#collage {
-  background-image: url(media/collage.jpg);
-}
-
-#girafe {
-  background-image: url(media/girafe.jpg);
-}
-
-#fete-de-la-musique {
-  background-image: url(media/fete-de-la-musique.jpg);
-}
-
-#fete-du-livre {
-  background-image: url(media/affiche-fête-du-livre.jpg);
-}
-
-#futura {
-  background-image: url(media/futura.jpg);
-}
-
-#rechauffement-climatique {
-  background-image: url(media/rechauffement-climatique.jpg);
+/*affichage des miniatures*/
+.picture {
+  width: 20rem;
+  height: auto;
+  padding: 0.5rem;
 }
 
 /*--------------***************-------------Contact----------------**************--------------*/

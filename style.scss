@@ -41,7 +41,7 @@ a{
 li{
     list-style: none;
     text-align: center;
-    line-height: 3;
+
     font-family: $titles-family;
 }
 ul{
@@ -122,6 +122,9 @@ nav{
         font-family: $titles-family;
         font-weight: $black;
         font-size: $size64;
+        li{
+            line-height: 3;
+        }
     }
 }
 nav.show{
@@ -232,60 +235,19 @@ nav.show{
     background-color: $yellow;
     color: black;
 }
-/* Style affichage projets */
-%box-portfolio{
-    display: block;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position-x: left;
-    width : 35rem;
-    height: 30rem;
-}
-%box-affiche{
-    display: block;
-    background-size: 60%;
-    background-repeat: no-repeat;
-    background-position-x: left;
-    width : 35rem;
-    height: 30rem;
-}
-#dashboard{
+/*affichage gallerie*/
 
-    background-image: url(media/screenshot_dashboard.png);
-   @extend%box-portfolio;
+.portfolio{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
 }
-#multiplication{
-    background-image: url(media/screenshot_multiplication.png);
-   @extend%box-portfolio;
-
-}
-#chess_castle{
-   @extend%box-portfolio;
-   background-image: url(media/chess-castle.jpg);
-}
-#collage{
-    @extend%box-portfolio;
-    background-image: url(media/collage.jpg);
-}
-#girafe{
-    @extend%box-affiche;
-    background-image: url(media/girafe.jpg);
-}
-#fete-de-la-musique{
-   @extend%box-affiche;
-   background-image: url(media/fete-de-la-musique.jpg);
-}
-#fete-du-livre{
-   @extend%box-affiche;
-   background-image: url(media/affiche-fête-du-livre.jpg);
-}
-#futura{
-   @extend%box-affiche;
-   background-image: url(media/futura.jpg);
-}
-#rechauffement-climatique{
-   @extend%box-affiche;
-   background-image: url(media/rechauffement-climatique.jpg);
+/*affichage des miniatures*/
+.picture{
+    width : 20rem;
+    height : auto;
+    padding : 0.5rem
 }
 /*--------------***************-------------Contact----------------**************--------------*/
 label{
