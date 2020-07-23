@@ -166,7 +166,6 @@ nav.show{
     flex-wrap: wrap;
     overflow: hidden;
     transition: width .600s ease-in-out, height .600s ease-in-out;
-
     i{
         font-size: 3.5rem;
         padding: 1rem;
@@ -247,7 +246,11 @@ nav.show{
 .picture{
     width : 20rem;
     height : auto;
-    padding : 0.5rem
+    padding : 0.5rem;
+    
+}
+.graph-pic.suppr, .web-pic.suppr{
+display: none;
 }
 /*--------------***************-------------Contact----------------**************--------------*/
 label{

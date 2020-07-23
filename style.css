@@ -331,6 +331,10 @@ nav.show {
   padding: 0.5rem;
 }
 
+.graph-pic.suppr, .web-pic.suppr {
+  display: none;
+}
+
 /*--------------***************-------------Contact----------------**************--------------*/
 label {
   font-family: "Montserrat", sans-serif;
