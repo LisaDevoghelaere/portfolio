@@ -9,13 +9,14 @@ Création de mon portfolio en ligne
 
 ## Animations
 -Un cercle suit la souris et fait passer le visuel à la lumière. Il évoque ainsi une lampe de poche ou un spot dans la nuit.
-### les +
- -au clic, certaines fernête d'immeuble font apparaitre des modals contenant quelques informations sur moi.
-Dans le cas où l'on ne penserait pas à cliquer, ces informations seront aussi trouvable dans le menu ou d'autres portions du site.
+-boutons animés en js pour faire apparaitre les compétences
+-boutons animés en js pour trier le portfolio
+-clic sur les miniatures pour avoir des renseignements sur les projets et le lien
 
 ## Qui suis-je ?
-texte de présentation incluant domaine d'expertise et soft skills. Des liens vers un formulaire de contact, CV et réseaux sociaux (linkedin, github).
+texte de présentation et photo. Des boutons pour voir les compétences web et design.
 
 ## Partie Portfolio
--S'appuyer sur le thème pour la mise en page. Présentation clair qui n'occulte pas le fond avec une forme trop compliquée.
--Faire une partie pour le print ?
+Miniatures illustrant les différents projets print et web. 
+au hover on voit le nom du projet
+au clic un modal s'ouvre avec plus d'informations quand au projet et le lien vers le site internet (quand il y a lieu)
