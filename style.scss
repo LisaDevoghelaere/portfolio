@@ -44,6 +44,11 @@ li{
     line-height: 3;
     font-family: $titles-family;
 }
+ul{
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
 /*---------------------Header---------------------------*/
 .building{
     background-image: url(media/header-desk.png);
@@ -56,8 +61,8 @@ li{
     align-content: center;
 }
 .transparent-block{
-    width: 55%;
-    height : 40%;
+    width: 45.625rem;
+    height : 19.375rem;
     background-color: $transparent-black;
     align-self: center;
 
@@ -129,10 +134,11 @@ nav.show{
     justify-content: space-between;
     align-content: flex-start;
     margin-top: 10%;
+    
 }
 .about{
     width: 50%;
-    padding: 1rem;;
+    padding: 1rem;
 }
 .flex-competence{
     display: flex;
@@ -140,11 +146,11 @@ nav.show{
     align-content: center;
 }
 .photo{
-    background-image: url(media/autoportrait-masque.jpg);
-    background-size: 50%;
+    background-image: url(media/photo_cv.jpg);
+    background-size: 45%;
     background-repeat: no-repeat;
     background-position-x: left;
-   width : 50%;
+    width : 50%;
 }
 .competence-web{
     width: 0;
@@ -157,10 +163,12 @@ nav.show{
     flex-wrap: wrap;
     overflow: hidden;
     transition: width .600s ease-in-out, height .600s ease-in-out;
+
     i{
         font-size: 3.5rem;
         padding: 1rem;
     }
+    
 }
 .competence-design{
     width: 0;
@@ -195,9 +203,91 @@ nav.show{
     margin-top : 10%;
     h2{
         text-align: center;
+    }    
+}
+
+/* Style the buttons */
+#btn-container{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    margin : 3rem;
+}
+.btn {
+    border: none;
+    outline: none;
+    padding: 1rem 5rem;
+    background-color: white;
+    cursor: pointer;
+    font-family: $titles-family;
+    font-weight: $bold;
+    font-size: 1rem;
+    margin: 1rem;
+    color: black;
+    &:hover {
+        background-color: #ddd;
     }
 }
-/*---------------------------Contact------------------------------*/
+.btn.active {
+    background-color: $yellow;
+    color: black;
+}
+/* Style affichage projets */
+%box-portfolio{
+    display: block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    width : 35rem;
+    height: 30rem;
+}
+%box-affiche{
+    display: block;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position-x: left;
+    width : 35rem;
+    height: 30rem;
+}
+#dashboard{
+
+    background-image: url(media/screenshot_dashboard.png);
+   @extend%box-portfolio;
+}
+#multiplication{
+    background-image: url(media/screenshot_multiplication.png);
+   @extend%box-portfolio;
+
+}
+#chess_castle{
+   @extend%box-portfolio;
+   background-image: url(media/chess-castle.jpg);
+}
+#collage{
+    @extend%box-portfolio;
+    background-image: url(media/collage.jpg);
+}
+#girafe{
+    @extend%box-affiche;
+    background-image: url(media/girafe.jpg);
+}
+#fete-de-la-musique{
+   @extend%box-affiche;
+   background-image: url(media/fete-de-la-musique.jpg);
+}
+#fete-du-livre{
+   @extend%box-affiche;
+   background-image: url(media/affiche-fête-du-livre.jpg);
+}
+#futura{
+   @extend%box-affiche;
+   background-image: url(media/futura.jpg);
+}
+#rechauffement-climatique{
+   @extend%box-affiche;
+   background-image: url(media/rechauffement-climatique.jpg);
+}
+/*--------------***************-------------Contact----------------**************--------------*/
 label{
     font-family: $titles-family;
     font-weight: $medium;

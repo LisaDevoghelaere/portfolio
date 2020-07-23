@@ -54,6 +54,12 @@ li {
   font-family: "Montserrat", sans-serif;
 }
 
+ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
 /*---------------------Header---------------------------*/
 .building {
   background-image: url(media/header-desk.png);
@@ -72,8 +78,8 @@ li {
 }
 
 .transparent-block {
-  width: 55%;
-  height: 40%;
+  width: 45.625rem;
+  height: 19.375rem;
   background-color: rgba(0, 0, 0, 0.836);
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -188,8 +194,8 @@ nav.show {
 }
 
 .photo {
-  background-image: url(media/autoportrait-masque.jpg);
-  background-size: 50%;
+  background-image: url(media/photo_cv.jpg);
+  background-size: 45%;
   background-repeat: no-repeat;
   background-position-x: left;
   width: 50%;
@@ -268,7 +274,96 @@ nav.show {
   text-align: center;
 }
 
-/*---------------------------Contact------------------------------*/
+/* Style the buttons */
+#btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 3rem;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 1rem 5rem;
+  background-color: white;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 1rem;
+  color: black;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #FFAC0A;
+  color: black;
+}
+
+/* Style affichage projets */
+#dashboard, #multiplication, #chess_castle, #collage {
+  display: block;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  width: 35rem;
+  height: 30rem;
+}
+
+#girafe, #fete-de-la-musique, #fete-du-livre, #futura, #rechauffement-climatique {
+  display: block;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position-x: left;
+  width: 35rem;
+  height: 30rem;
+}
+
+#dashboard {
+  background-image: url(media/screenshot_dashboard.png);
+}
+
+#multiplication {
+  background-image: url(media/screenshot_multiplication.png);
+}
+
+#chess_castle {
+  background-image: url(media/chess-castle.jpg);
+}
+
+#collage {
+  background-image: url(media/collage.jpg);
+}
+
+#girafe {
+  background-image: url(media/girafe.jpg);
+}
+
+#fete-de-la-musique {
+  background-image: url(media/fete-de-la-musique.jpg);
+}
+
+#fete-du-livre {
+  background-image: url(media/affiche-fête-du-livre.jpg);
+}
+
+#futura {
+  background-image: url(media/futura.jpg);
+}
+
+#rechauffement-climatique {
+  background-image: url(media/rechauffement-climatique.jpg);
+}
+
+/*--------------***************-------------Contact----------------**************--------------*/
 label {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
