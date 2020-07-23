@@ -20,3 +20,8 @@ texte de présentation et photo. Des boutons pour voir les compétences web et d
 Miniatures illustrant les différents projets print et web. 
 au hover on voit le nom du projet
 au clic un modal s'ouvre avec plus d'informations quand au projet et le lien vers le site internet (quand il y a lieu)
+
+## Contact
+formulaire de contact sécurisé
+
+# footer ?
