@@ -40,11 +40,25 @@ h2 {
   font-size: 2.25rem;
 }
 
+h3 {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  color: #FFAC0A;
+}
+
 a {
   text-decoration: none;
   color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #FFAC0A;
 }
 
 li {
@@ -87,7 +101,7 @@ ul {
 
 /*------------Circle Mouse---------------*/
 .circle {
-  z-index: 99;
+  z-index: 100;
   width: 300px;
   height: 300px;
   background-image: url(media/cercle.png);
@@ -98,6 +112,8 @@ ul {
 
 /*--------------------------Barre de navigation-----------------*/
 .upper-bar {
+  position: fixed;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,13 +123,16 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 98;
+  max-width: 1280px;
+  background-color: rgba(0, 0, 0, 0.836);
 }
 
 .logo {
   background-image: url(media/logo-LD-fond-blanc.gif);
   background-size: 100%;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
 }
 
@@ -121,19 +140,26 @@ ul {
 .burger {
   color: white;
   font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 /*le menu caché*/
 nav {
-  position: absolute;
+  position: fixed;
   width: 100vw;
-  height: 0;
+  height: 100vh;
   background-color: black;
   top: 0;
   right: 1px;
-  -webkit-transition: height .600s ease-in-out;
-  transition: height .600s ease-in-out;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform .600s ease-in-out;
+  transition: -webkit-transform .600s ease-in-out;
+  transition: transform .600s ease-in-out;
+  transition: transform .600s ease-in-out, -webkit-transform .600s ease-in-out;
   overflow: hidden;
+  z-index: 99;
 }
 
 nav p {
@@ -162,9 +188,12 @@ nav ul li {
 }
 
 nav.show {
-  height: 100vh;
-  -webkit-transition: height .600s ease-in-out;
-  transition: height .600s ease-in-out;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform .600s ease-in-out;
+  transition: -webkit-transform .600s ease-in-out;
+  transition: transform .600s ease-in-out;
+  transition: transform .600s ease-in-out, -webkit-transform .600s ease-in-out;
 }
 
 /*-------------------------------A Propos-------------------------------*/
@@ -194,6 +223,8 @@ nav.show {
           justify-content: space-between;
   -ms-flex-line-pack: center;
       align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .photo {
@@ -258,12 +289,12 @@ nav.show {
   padding: 1rem;
 }
 
-.btn-web, .btn-design {
+.btn-web, .btn-design, .lien {
   padding: 0.5rem;
   border: 2px solid white;
 }
 
-.btn-web:hover, .btn-design:hover {
+.btn-web:hover, .btn-design:hover, .lien:hover {
   background-color: white;
   color: black;
 }
@@ -286,6 +317,8 @@ nav.show {
       justify-content: space-around;
   -ms-flex-line-pack: center;
       align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 3rem;
 }
 
@@ -329,10 +362,124 @@ nav.show {
   width: 20rem;
   height: auto;
   padding: 0.5rem;
+  overflow: hidden;
 }
 
-.graph-pic.suppr, .web-pic.suppr {
-  display: none;
+.graph-pic, .web-pic {
+  width: 20rem;
+  height: 20rem;
+  padding: 0.5rem;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: .600s ease-in-out;
+  transition: .600s ease-in-out;
+  overflow: hidden;
+}
+
+.web-pic.suppr {
+  -webkit-transform: translateX(-1000%);
+          transform: translateX(-1000%);
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  position: absolute;
+}
+
+.graph-pic.suppr {
+  -webkit-transform: translateX(1000%);
+          transform: translateX(1000%);
+  position: absolute;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+/*-------------------------modals-------------------*/
+.dashboard, .multiplication {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: black;
+  margin: auto;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform .600s ease-in-out;
+  transition: -webkit-transform .600s ease-in-out;
+  transition: transform .600s ease-in-out;
+  transition: transform .600s ease-in-out, -webkit-transform .600s ease-in-out;
+}
+
+.dashboard p > a > img, .multiplication p > a > img {
+  margin-top: 20%;
+  width: 3Orem;
+  height: auto;
+  padding: 1rem;
+}
+
+.chess-castle, .collage {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: black;
+  margin: auto;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform .600s ease-in-out;
+  transition: -webkit-transform .600s ease-in-out;
+  transition: transform .600s ease-in-out;
+  transition: transform .600s ease-in-out, -webkit-transform .600s ease-in-out;
+}
+
+.chess-castle p > img, .collage p > img {
+  margin-top: 20%;
+  width: 3Orem;
+  height: 16.375rem;
+  padding: 1rem;
+}
+
+.close {
+  text-align: right;
+  font-size: 2.25rem;
+}
+
+.projet-texte {
+  padding: 1rem;
+  width: 50%;
+}
+
+.projet-texte p {
+  max-width: 30rem;
+}
+
+.hidden {
+  overflow: hidden;
+  -webkit-transform: translateX(1000%);
+          transform: translateX(1000%);
+  -webkit-transition: -webkit-transform .600s ease-in-out;
+  transition: -webkit-transform .600s ease-in-out;
+  transition: transform .600s ease-in-out;
+  transition: transform .600s ease-in-out, -webkit-transform .600s ease-in-out;
 }
 
 /*--------------***************-------------Contact----------------**************--------------*/

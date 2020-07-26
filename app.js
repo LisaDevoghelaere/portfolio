@@ -1,13 +1,13 @@
+//-------------------------------------------------Header-----------------------------------------------
 const circle = document.querySelector('.circle');
 const burger = document.querySelector('.burger');
-const close = document.querySelector('nav>p>a');
+const closeNav = document.querySelector('nav>p>a');
 // console.log(circle);
 document.addEventListener('mousemove', function(e) {
    circle.setAttribute('style', 'top:'+(e.pageY - 150)+"px; left:"+(e.pageX - 150)+"px;")
 });
 
 //Burger et nav
-
 function toggleNavBar(){
    const navBar = document.querySelector('nav');
    navBar.classList.toggle('show');
@@ -18,10 +18,12 @@ burger.addEventListener('click', function(e){
    toggleNavBar();
 });
 // Ajout de l'évènement close
-close.addEventListener('click', function(e){
+closeNav.addEventListener('click', function(e){
    e.preventDefault();
    toggleNavBar();
 });
+
+//--------------------------------------------------Qui-suis-je?------------------------------------------------------------
 
 const btnWeb = document.querySelector('.btn-web');
 btnWeb.addEventListener('click', function(e){
@@ -43,7 +45,9 @@ btnDesign.addEventListener('click', function(e){
 
 });
 
-//Portfolio
+//--------------------------------------------------------Portfolio------------------------------------------------------
+
+//---------------------------------------------Tri-----------------------------------------------
 //Déclaration des variables
 const buttonWeb = document.querySelector('.button-web');
 const buttonPrint = document.querySelector('.button-print');
@@ -54,20 +58,21 @@ buttonWeb.addEventListener('click', function(e){
    e.preventDefault();
    const graphPictures = document.querySelectorAll('.graph-pic');
    for(let graphPicture of graphPictures){
-      graphPicture.classList.add('suppr');
+      graphPicture.classList.toggle('suppr');
+      
    }
    const webPictures = document.querySelectorAll('.web-pic');
    for(let webPicture of webPictures){
       webPicture.classList.remove('suppr');
-   }
-   
+   }   
 });
+
 //Ajout de l'évènement click pour le bouton de sélection print
 buttonPrint.addEventListener('click', function(e){
    e.preventDefault();
    const webPictures = document.querySelectorAll('.web-pic');
    for(let webPicture of webPictures){
-      webPicture.classList.add('suppr');
+      webPicture.classList.toggle('suppr');
    }
    const graphPictures = document.querySelectorAll('.graph-pic');
    for(let graphPicture of graphPictures){
@@ -76,6 +81,7 @@ buttonPrint.addEventListener('click', function(e){
    
 });
 
+//----------------Rétablit toutes les miniatures-----------------
 buttonAll.addEventListener('click', function(e){
    e.preventDefault();
    const graphPictures = document.querySelectorAll('.graph-pic');
@@ -87,3 +93,45 @@ buttonAll.addEventListener('click', function(e){
       webPicture.classList.remove('suppr');
    }
 });
+
+// ---------------------------Open Modals---------------------------
+// Créer une fonction qui permet de créer une fenêtre pour le projet
+const dashboard = document.getElementById('dashboard');
+const multiplication = document.getElementById('multiplication');
+const chessCastle = document.getElementById('chess-castle');
+const collage = document.getElementById('collage');
+
+const closeModals = document.querySelectorAll('.close');
+
+// console.log(dashboard);
+dashboard.addEventListener('click', function(e){
+   e.preventDefault();
+   const modalDashboard = document.querySelector('.dashboard');
+   modalDashboard.classList.remove('hidden');
+
+});
+multiplication.addEventListener('click', function(e){
+   e.preventDefault();
+   const modalMultiplication = document.querySelector('.multiplication');
+   modalMultiplication.classList.remove('hidden');
+
+});
+chessCastle.addEventListener('click', function(e){
+   e.preventDefault();
+   const modalChessCastle = document.querySelector('.chess-castle');
+   modalChessCastle.classList.remove('hidden');   
+});
+collage.addEventListener('click', function(e){
+   e.preventDefault();
+   const modalCollage = document.querySelector('.collage');
+   modalCollage.classList.remove('hidden');   
+});
+
+
+//-------------------------------CLOSE MODAL---------------------------------
+for(closeModal of closeModals){
+closeModal.addEventListener('click', function(e){
+   e.preventDefault();
+   this.parentElement.parentElement.classList.add('hidden');
+});
+}

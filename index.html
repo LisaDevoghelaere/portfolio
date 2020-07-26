@@ -13,15 +13,15 @@
   <header class="container">
     <div class="upper-bar">
       <!--logo + barre nav-->
-      <div class="logo"></div>
-      <p><a href="#" class="burger"><i class="fas fa-bars"></i></a></p>
+      <a href="#"><img src="media/logo-LD-fond-blanc.gif" class="logo"></img></a>
+      <p class="burger"><a href="#"><i class="fas fa-bars"></i></a></p>
     </div>
     <nav>
       <p><a href="#">X</a></p>
       <ul>
-        <li>Qui suis-je ?</li>
-        <li>Projets</li>
-        <li>Contacts</li>
+        <li><a href="#qui-suis-je?">Qui suis-je ?</a></li>
+        <li><a href="#projets">Projets</a></li>
+        <li><a href="#contact">Contacts</a></li>
       </ul>
     </nav>
     <div  class="building">
@@ -61,8 +61,8 @@
         <h2>Qui-suis-je?</h2>
         <p>Curieuse du monde qui m'entoure, je me suis reconvertie vers les métiers de développeuse web et graphiste pour satisfaire mon besoin d'en apprendre toujours plus.</p>
         <div class="flex-competence">
-          <h3><a href="#" class="btn-web">Compétences Web</a></h3>
-          <h3><a href="#" class="btn-design">Compétences Design</a></h3>           
+          <p><a href="#" class="btn-web">Compétences Web</a></p>
+          <p><a href="#" class="btn-design">Compétences Design</a></p>           
         </div>
       </div>               
     </section>
@@ -73,38 +73,80 @@
       <div><a href="#" class="btn button-web">Web</a></div>
       <div><a href="#" class="btn button-print">Print</a> </div>               
     </div>
+    
     <div id="all-portfolio">
       <ul class="portfolio">
-        <li class="web-pic"><a href="#"><img src="media/miniatures/mini-dashboard.jpg" class="picture" alt=""></a></li>
-        <li class="web-pic"><a href="#"><img src="media/miniatures/mini-multiplication.jpg" class="picture" alt=""></a></li>
-        <li class="graph-pic"><a href="#"><img src="media/miniatures/mini-chess-castle.jpg" class="picture" alt=""></a></li>
-        <li class="graph-pic"><a href="#"><img src="media/miniatures/mini-collage.jpg" class="picture" alt=""></a></li>
-        <li class="graph-pic"><a href="#"><img src="media/miniatures/mini-girafe.jpg" class="picture" alt=""></a></li>
-        <li class="graph-pic"><a href="#"><img src="media/miniatures/mini-musique.jpg" class="picture" alt=""></a></li>
-        <li class="graph-pic"><a href="#"><img src="media/miniatures/mini-livre.jpg" class="picture" alt=""></a></li>
-        <li class="graph-pic"><a href="#"><img src="media/miniatures/mini-futura.jpg" class="picture" alt=""></a></li>
+        <li class="web-pic"><a href="#" id="dashboard"><img src="media/miniatures/mini-dashboard.jpg" class="picture" alt=""></a></li>
+        <li class="web-pic"><a href="#" id="multiplication"><img src="media/miniatures/mini-multiplication.jpg" class="picture" alt=""></a></li>
+        <li class="graph-pic"><a href="#" id="chess-castle"><img src="media/miniatures/mini-chess-castle.jpg" class="picture" alt=""></a></li>
+        <li class="graph-pic"><a href="#" id="collage"><img src="media/miniatures/mini-collage.jpg" class="picture" alt=""></a></li>
+        <li class="graph-pic"><a href="#" id="fete-de-la-musique"><img src="media/miniatures/mini-musique.jpg" class="picture" alt=""></a></li>
         <li class="graph-pic"><a href="#"><img src="media/miniatures/mini-rechauffement.jpg" class="picture" alt=""></a></li>
       </ul>
     </div>
+    <div class="dashboard hidden">
+      <p><a href="https://lisad.promo-39.codeur.online/dashboard/index.php" target="_blank" rel="noopener noreferrer"><img src="media/portfolio/dashboard.png" alt="visuel dashboard"></a></p>
+      <div class="projet-texte">
+        <p class="close"><a href="#">X</a></p>
+        <h3>Mon Dashboard</h3>
+        <p>Application contenant un tableau de suivi de consommation d'ampoule. Dans ce dernier on peut ajouter, modifier ou supprimer des lignes. On peut également lancer une recherche dans le tableau et utiliser un login pour se connecter à sa session.</p>
+        <h4>Technique</h4>
+        <p>html5, css, php, mySQL, sass, Bootstrap</p>
+        <h4><a href="https://lisad.promo-39.codeur.online/dashboard/index.php" target="_blank" rel="noopener noreferrer">Voir le site</a></h4>
+        <p>Identifiant : Manu - Mot de passe : passe</p>
+      </div>
+    </div>
+    <div class="multiplication hidden">
+      <p><a href="https://lisad.promo-39.codeur.online/multiplication/" target="_blank" rel="noopener noreferrer"><img src="media/portfolio/multiplication.png" alt="visuel dashboard"></a></p>
+      <div class="projet-texte">
+        <p class="close"><a href="#">X</a></p>
+        <h3>Multiplication</h3>
+        <p>Application de révision des tables de multiplication. Composée de différents niveaux, l'application permet de choisir une ou plusieurs tables à réviser puis de se tester. Ce projet de formation a servi d'initiation à php.</p>
+        <h4>Technique</h4>
+        <p>html5, css, php, Sass</p>
+        <h4><a href="https://lisad.promo-39.codeur.online/multiplication/" target="_blank" rel="noopener noreferrer">Voir le site</a></h4>
+      </div>
+    </div>
+    <div class="chess-castle hidden">
+        <p><img src="media/portfolio/chess-castle.jpg" alt="affiche chess-castle"></p>
+        <div class="projet-texte">
+          <p class="close"><a href="#">X</a></p>
+          <h3>Chess-Castle</h3>
+          <p>Affiche en isométrie pour un visuel de jeu vidéo. Le design devait s'inspirer du jeu vidéo "Monument Valley" mêlé à mon univers personnel. Le château est inspiré du court-métrage "le Roi et l'oiseau" (1952) et le parcours "Chasseur de dragon"(2008). </p>
+          <h4>Technique</h4>
+          <p>Illustrations, Adobe Illustrator</p>
+        </div>
+    </div>
+    <div class="collage hidden">
+      <p><img src="media/portfolio/collage.jpg" alt="affiche trouve l'expression"></p>
+      <div class="projet-texte">
+        <p class="close"><a href="#">X</a></p>
+        <h3>Trouve l'expression</h3>
+        <p>Affiche illustrant une expression à retrouver. l'affiche est construite à partid d'anciennes photos libre de droits et de matières récoltées, supperposées à la façon des affiches dadaïstes.</p>
+        <h4>Technique</h4>
+        <p>Adobe Photoshop</p>
+      </div>
+    </div>
   </section>
-  <section>
+  <section id="contact">
     <h2>Contact</h2>
       <div class="contact">
           <form action="form.php" method="post">
-              <div>
-                <p><label for="name">Nom :</label></p>
-                <input type="text" id="name" name="user_name">
-              </div>
-              <div>
-                <p><label id="e-mail">E-mail :</label></p>
-                <input type="email" id="mail" name="user_email">
-              </div>
-              <div>
-                  <p><label for="msg">Message :</label></p>
-                  <textarea id="msg" name="user_message" rows="10"></textarea>
-              </div>
-              <button>Envoyer</button>
-          </form>
+            <div>
+              <p><label for="email">E-mail :</label></p>
+              <input type="email" name="mail" id="mail" placeholder="Votre adresse mail" required>
+            </div>
+            <div>
+              <p><label id="objet">Objet :</label></p>
+              <input type="text" name="object" id="objet" placeholder="Object" required>
+            </div>
+            <div>
+              <p><label for="msg">Message :</label></p>
+              <textarea name="message" id="message" cols="30" rows="8" placeholder="Votre message" required></textarea>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LerjrQZAAAAAJ4St8nR59c2XBeeG4F7DAhJi0Cp"></div>        
+            <button>Envoyer</button>
+        </form>
     </div>
   </section>
         

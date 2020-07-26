@@ -32,12 +32,25 @@ h2{
     font-size: $size36;
 
 }
+h3{
+    font-size: 2rem;
+    font-family: $titles-family;
+    font-weight: $extra-bold;
+    color : $yellow;
+}
 a{
     text-decoration: none;
     color: white;
     font-family: $titles-family;
     font-weight: $bold;
 }
+h4{
+    font-size: 1.5rem;
+    font-family: $titles-family;
+    font-weight: $semi-bold;
+    color : $yellow
+}
+
 li{
     list-style: none;
     text-align: center;
@@ -70,7 +83,7 @@ ul{
 
 /*------------Circle Mouse---------------*/
 .circle {
-    z-index: 99;
+    z-index: 100;
     width: 300px;
     height: 300px;
     background-image: url(media/cercle.png);
@@ -80,32 +93,42 @@ ul{
 }
 /*--------------------------Barre de navigation-----------------*/
 .upper-bar{
+    position: fixed; 
+    width : 100%;  
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 98;
+    max-width: 1280px;
+    background-color: $transparent-black;
 }
+
 .logo{
     background-image: url(media/logo-LD-fond-blanc.gif);
     background-size: 100%;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
 }
 /*--------------------Burger-------------------*/
 .burger{
     color: white;
-    font-size: 2rem;   
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 /*le menu caché*/
 nav{
-    position : absolute;
+    position : fixed;
     width: 100vw;
-    height: 0;
+    height: 100vh;
     background-color: black;
     top : 0;
     right : 1px;
-    transition : height .600s ease-in-out;
+    transform: translateX(-100%);
+    transition : transform .600s ease-in-out;
     overflow: hidden;
+    z-index: 99;
     p{
         box-sizing: border-box;
         width: 100%;
@@ -128,8 +151,9 @@ nav{
     }
 }
 nav.show{
-    height : 100vh;
-    transition : height .600s ease-in-out;
+    transform : translateX(0);
+    transition : transform .600s ease-in-out;
+
 }
 /*-------------------------------A Propos-------------------------------*/
 #qui-suis-je{
@@ -147,6 +171,7 @@ nav.show{
     display: flex;
     justify-content: space-between;
     align-content: center;
+    flex-wrap: wrap;
 }
 .photo{
     background-image: url(media/photo_cv.jpg);
@@ -192,7 +217,7 @@ nav.show{
 .vagrant{
     padding: 1rem;
 }
-.btn-web, .btn-design{
+.btn-web, .btn-design, .lien{
     padding: 0.5rem;
     border: 2px solid white;
     &:hover{
@@ -213,7 +238,9 @@ nav.show{
     display: flex;
     justify-content: space-around;
     align-content: center;
+    flex-wrap: wrap;
     margin : 3rem;
+
 }
 .btn {
     border: none;
@@ -247,11 +274,98 @@ nav.show{
     width : 20rem;
     height : auto;
     padding : 0.5rem;
-    
+    overflow: hidden;
 }
-.graph-pic.suppr, .web-pic.suppr{
-display: none;
+
+
+.graph-pic, .web-pic{
+width : 20rem;
+height : 20rem;
+padding : 0.5rem;
+transform : translateX(0);
+transition : .600s ease-in-out;
+overflow: hidden;
 }
+.web-pic.suppr{
+    transform : translateX(-1000%);
+    transition : 1s ease;
+    position: absolute;
+}
+.graph-pic.suppr{
+    transform : translateX(+1000%);
+    position: absolute;
+    transition : 1s ease;
+}
+/*-------------------------modals-------------------*/
+
+%modal{
+    position: fixed;
+    top : 0;
+    left:0;
+    width: 100vw;
+    height : 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: black;
+    margin : auto;
+    p>a>img{
+        margin-top: 20%;
+        width : 3Orem;
+        height: auto;
+        padding : 1rem;
+    }
+    transform : translateX(0);
+    transition : transform .600s ease-in-out;
+}
+%affiche{
+    position: fixed;
+    top : 0;
+    // left:0;
+    width: 100vw;
+    height : 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: black;
+    margin : auto;
+    p>img{
+        margin-top: 20%;
+        width : 3Orem;
+        height: 16.375rem;
+        padding : 1rem;
+    }
+    transform : translateX(0);
+    transition : transform .600s ease-in-out;
+}
+.close{
+    text-align: right;
+    font-size: $size36;
+}
+.projet-texte{
+    padding : 1rem;
+    width : 50%;
+    p{
+        max-width : 30rem;
+    }
+}
+.dashboard, .multiplication{
+    @extend%modal;    
+}
+.chess-castle, .collage{
+    @extend%affiche; 
+}
+
+.hidden{
+    overflow: hidden;
+    transform : translateX(+1000%);
+    transition : transform .600s ease-in-out;
+}
+
 /*--------------***************-------------Contact----------------**************--------------*/
 label{
     font-family: $titles-family;
