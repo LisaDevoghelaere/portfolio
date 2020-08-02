@@ -2,6 +2,7 @@
 const circle = document.querySelector('.circle');
 const burger = document.querySelector('.burger');
 const closeNav = document.querySelector('nav>p>a');
+const goPages = document.querySelectorAll('nav>ul>li>a')
 // console.log(circle);
 document.addEventListener('mousemove', function(e) {
    circle.setAttribute('style', 'top:'+(e.pageY - 150)+"px; left:"+(e.pageX - 150)+"px;")
@@ -22,6 +23,11 @@ closeNav.addEventListener('click', function(e){
    e.preventDefault();
    toggleNavBar();
 });
+for(goPage of goPages){
+   goPage.addEventListener('click', function(e){
+      toggleNavBar();
+   });
+}
 
 //--------------------------------------------------Qui-suis-je?------------------------------------------------------------
 
@@ -100,6 +106,9 @@ const dashboard = document.getElementById('dashboard');
 const multiplication = document.getElementById('multiplication');
 const chessCastle = document.getElementById('chess-castle');
 const collage = document.getElementById('collage');
+const musique = document.getElementById('musique');
+const rechauffement = document.getElementById('rechauffement');
+
 
 const closeModals = document.querySelectorAll('.close');
 
@@ -126,7 +135,16 @@ collage.addEventListener('click', function(e){
    const modalCollage = document.querySelector('.collage');
    modalCollage.classList.remove('hidden');   
 });
-
+musique.addEventListener('click', function(e){
+   e.preventDefault();
+   const modalMusique = document.querySelector('.musique');
+   modalMusique.classList.remove('hidden');   
+});
+rechauffement.addEventListener('click', function(e){
+   e.preventDefault();
+   const modalRechauffement = document.querySelector('.rechauffement');
+   modalRechauffement.classList.remove('hidden');   
+});
 
 //-------------------------------CLOSE MODAL---------------------------------
 for(closeModal of closeModals){
