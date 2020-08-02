@@ -18,10 +18,8 @@ texte de présentation et photo. Des boutons pour voir les compétences web et d
 
 ## Partie Portfolio
 Miniatures illustrant les différents projets print et web. 
-au hover on voit le nom du projet
-au clic un modal s'ouvre avec plus d'informations quand au projet et le lien vers le site internet (quand il y a lieu)
+Tri print/web des projets
+Au clic un modal s'ouvre avec plus d'informations quand au projet et le lien vers le site internet (quand il y a lieu)
 
 ## Contact
-formulaire de contact sécurisé
-
-# footer ?
+mailto et CV téléchargeable
