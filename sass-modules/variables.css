@@ -3,4 +3,8 @@
 /*Font*/
 /*weight*/
 /*------SIZE------*/
+/*--------------------- Mediaqueries------------------*/
+/*@media screen and (min-width : 992px){}  <-9 pouces*/
+/*@media screen and (min-width: 480px) and (max-width : 991px){}  <-tablette*/
+/*@media screen and (max-width: 479px){}smartphone*/
 /*# sourceMappingURL=variables.css.map */

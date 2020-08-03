@@ -18,5 +18,13 @@ $black : 900;
 $size16: 1rem;
 $size64: 4rem;
 $size36: 2.25rem;
+/*--------------------- Mediaqueries------------------*/
+/*@media screen and (min-width : 992px){}  <-9 pouces*/
+$desktop : "screen and (min-width : 992px)";
+/*@media screen and (min-width: 480px) and (max-width : 991px){}  <-tablette*/
+$tablette : "screen and (min-width: 768px) and (max-width : 991px)";
+$mini-tablette : "screen and (min-width: 480px) and (max-width : 767px)";
+/*@media screen and (max-width: 479px){}smartphone*/
+$smartphone : "screen and (max-width: 479px)";
 
 

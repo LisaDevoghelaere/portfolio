@@ -1,5 +1,5 @@
 @import 'sass-modules/variables.scss';
-@import 'sass-modules/mediaqueries.scss';
+//@import 'sass-modules/mediaqueries.scss';
 
 /*-----------------Base-------------------------*/
 body{
@@ -186,7 +186,7 @@ nav.show{
     background-image: url(media/photo_cv.jpg);
     background-size: 45%;
     background-repeat: no-repeat;
-    background-position-x: left;
+    background-position-x: left 10%;
     width : 50%;
 }
 .competence-web{
@@ -266,10 +266,6 @@ nav.show{
         background-color: #ddd;
     }
 }
-.btn.active {
-    background-color: $yellow;
-    color: black;
-}
 /*affichage gallerie*/
 
 .portfolio{
@@ -290,7 +286,7 @@ width : 20rem;
 height : 20rem;
 padding : 0.5rem;
 transform : translateX(0);
-transition : .600s ease-in-out;
+transition : 1s ease;
 overflow: hidden;
 }
 .web-pic.suppr{
@@ -426,4 +422,297 @@ overflow: hidden;
     display: flex;
     align-content: center;
     justify-content: space-around;
+}
+
+@media#{$tablette}{
+    body{
+        margin : 0 auto;  
+        overflow-x: hidden;
+        .container{
+            max-width: 800px;
+            margin: auto; 
+        }
+    }
+    section{
+        padding-top : 2%;
+    }
+    .circle{
+        display: none;
+    }
+    .building{
+        background-image: url(media/header-desk.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        width : 100%;
+        height : 80vh;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+/*------------------Projets----------------*/
+
+    #btn-container{
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+        margin : 1.5rem;
+    
+    }
+    .btn {
+        padding: 0.5rem 3rem;
+        cursor: pointer;
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+    %modal{
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        margin : auto;
+        p>a>img{
+            margin-top: 5%;
+            width : 30rem;
+            height: auto;
+            padding : 1rem;
+        }
+    }
+    %affiche, %portrait{
+        flex-direction: column-reverse;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+        background-color: black;
+        margin : auto;
+        p>img{
+            margin-top: 5%;
+            width : 30rem;
+            height: auto;
+            padding : 1rem;
+        }
+    }
+
+}
+@media#{$mini-tablette}{
+    body{
+        margin : 0 auto;  
+        overflow-x: hidden;
+        .container{
+            max-width: 760px;
+            margin: auto; 
+        }
+    }
+    section{
+        padding-top : 2%;
+    }
+    .circle{
+        display: none;
+    }
+    .building{
+        background-image: url(media/header-desk.png);
+        background-repeat: no-repeat;
+        background-position: top;
+        width : 100%;
+        height : 50%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+/*------------------Projets----------------*/
+
+    #btn-container{
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+        margin : 1.5rem;
+    
+    }
+    .btn {
+        padding: 0.5rem 3rem;
+        cursor: pointer;
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+    %modal{
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        margin : auto;
+        p>a>img{
+            margin-top: 5%;
+            width : 30rem;
+            height: auto;
+            padding : 1rem;
+        }
+    }
+    %affiche, %portrait{
+        flex-direction: column-reverse;
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+        flex-wrap: wrap;
+        background-color: black;
+        margin : auto;
+        p>img{
+            margin-top: 5%;
+            width : 30rem;
+            height: auto;
+            padding : 1rem;
+        }
+    }
+
+}
+@media#{$smartphone}{
+    body{
+        margin : 0 auto;  
+        overflow-x: hidden;
+        .container{
+            max-width: 350px;
+            margin: auto; 
+        }
+    }
+    section{
+        padding-top : 2%;
+    }
+    .circle{
+        display: none;
+    }
+    .building{
+        background-image: url(media/building-header.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width : 100%;
+        height : 100vh;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    h1{
+        right : 25%;
+        text-align: center;
+        font-size: $size36;
+        span{
+            font-weight : $medium;
+            letter-spacing: 0.5rem;
+            font-size: 1.5rem;
+        }
+    }
+    .transparent-block{
+        width: 20rem;
+        height : 15rem;
+    }
+    nav{
+        right : 1px;
+        p{
+            box-sizing: border-box;
+            width: 100%;
+            font-size: 2rem;
+            text-align: right;
+            margin-right: 1rem;
+            padding-right: 2rem;
+        }
+        ul{
+            box-sizing: border-box;
+            width: 100%;
+            font-size: 2rem;
+            li{
+                line-height: 3;
+            }
+        }
+    }
+    #qui-suis-je{
+        display: flex;
+        justify-content: space-between;
+        align-content: flex-start;
+        flex-direction: column-reverse;
+    }
+    .about{
+        text-align: center;
+        width: 100%;
+        padding: 1rem;
+        max-width: 300px;
+
+    }
+    .flex-competence{
+        max-width : 300px;
+        display: flex;
+        justify-content: space-between;
+        align-content: left;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .photo{
+        background-image: none;
+        width : 100%;
+        height: 100%;
+    }
+    .portfolio{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding : 0;
+        margin : 0;
+        li{
+            padding-left: 0;
+        }
+    }
+    #btn-container{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-content: center;
+        flex-wrap: wrap;
+        margin : 1.5rem;
+        height : 15rem;
+    }
+    .btn {
+        padding: 0.5rem 3rem;
+        cursor: pointer;
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+    %modal{
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin : auto;
+        p>a>img{
+            margin-top: 5%;
+            width : 20rem;
+            height: auto;
+            padding : 1rem;
+        }
+    }
+    %affiche, %portrait{
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        background-color: black;
+        margin : auto;
+        p>img{
+            margin-top: 5%;
+            width : 20rem;
+            height: auto;
+            padding : 0.5rem;
+        }
+    }
+    .contact{
+        display: flex;
+        align-content: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
 }
