@@ -136,7 +136,7 @@ nav{
     top : 0;
     right : 1px;
     transform: translateX(+100%);
-    transition : transform .600s ease-in-out;
+    transition : transform .600s cubic-bezier(.03,.68,.14,.79);
     overflow: hidden;
     z-index: 99;
     p{
@@ -156,13 +156,13 @@ nav{
         font-weight: $black;
         font-size: $size64;
         li{
-            line-height: 3;
+            line-height: 2.5;
         }
     }
 }
 nav.show{
     transform : translateX(0);
-    transition : transform .600s ease-in-out;
+    transition : transform .600s cubic-bezier(.03,.68,.14,.79);
 
 }
 /*-------------------------------A Propos-------------------------------*/
@@ -199,7 +199,7 @@ nav.show{
     align-content: center;
     flex-wrap: wrap;
     overflow: hidden;
-    transition: width .600s ease-in-out, height .600s ease-in-out;
+    transition: width .600s cubic-bezier(.03,.68,.14,.79), height .600s cubic-bezier(.03,.68,.14,.79);
     i{
         font-size: 3.5rem;
         padding: 1rem;
@@ -216,12 +216,12 @@ nav.show{
     align-content: center;
     flex-wrap: wrap;
     overflow: hidden;
-    transition: width .600s ease-in-out, height .600s ease-in-out;
+    transition: width .600s cubic-bezier(.03,.68,.14,.79), height .600s cubic-bezier(.03,.68,.14,.79);
 }
 .show-web, .show-design{
     width : 100%;
     height : 100%;
-    transition : width .600s ease-in-out, height .600s ease-in-out;
+    transition : width .600s cubic-bezier(.03,.68,.14,.79), height .600s cubic-bezier(.03,.68,.14,.79);
 }
 .vagrant{
     padding: 1rem;
@@ -286,18 +286,18 @@ width : 20rem;
 height : 20rem;
 padding : 0.5rem;
 transform : translateX(0);
-transition : 1s ease;
+transition : 1500ms cubic-bezier(.03,.68,.14,.79);
 overflow: hidden;
 }
 .web-pic.suppr{
     transform : translateX(-1000%);
-    transition : 1s ease;
+    transition : 1500ms cubic-bezier(.03,.68,.14,.79);
     position: absolute;
 }
 .graph-pic.suppr{
     transform : translateX(+1000%);
     position: absolute;
-    transition : 1s ease;
+    transition : 1500ms cubic-bezier(.03,.68,.14,.79);
 }
 /*-------------------------modals-------------------*/
 
@@ -375,13 +375,13 @@ overflow: hidden;
         max-width : 30rem;
     }
 }
-.dashboard, .multiplication{
+.dashboard, .multiplication, .popy, .dgma{
     @extend%modal;    
 }
 .chess-castle, .collage{
     @extend%affiche; 
 }
-.musique, .rechauffement{
+.musique, .rechauffement, .flocons{
     @extend%portrait; 
 }
 .hidden{

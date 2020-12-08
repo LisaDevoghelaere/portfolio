@@ -32,12 +32,16 @@ for(goPage of goPages){
 //--------------------------------------------------Qui-suis-je?------------------------------------------------------------
 
 const btnWeb = document.querySelector('.btn-web');
+
 btnWeb.addEventListener('click', function(e){
    e.preventDefault();
    const competenceWeb = document.querySelector('.competence-web');
    competenceWeb.classList.toggle('show-web');
+
    const competenceDesign = document.querySelector('.show-design');
    competenceDesign.classList.remove('show-design');
+   console.log('coucou1a', competenceDesign);
+   console.log('coucou1b', competenceWeb);
 });
 
 const btnDesign = document.querySelector('.btn-design');
@@ -48,8 +52,11 @@ btnDesign.addEventListener('click', function(e){
 
    const competenceWeb = document.querySelector('.show-web');
    competenceWeb.classList.remove('show-web');
+   console.log('coucou2a',competenceDesign);
+   console.log('coucou2b',competenceWeb);
 
 });
+
 
 //--------------------------------------------------------Portfolio------------------------------------------------------
 
@@ -58,6 +65,7 @@ btnDesign.addEventListener('click', function(e){
 const buttonWeb = document.querySelector('.button-web');
 const buttonPrint = document.querySelector('.button-print');
 const buttonAll = document.querySelector('.button-all');
+
 
 //Ajout de l'évènement click pour le bouton de sélection web
 buttonWeb.addEventListener('click', function(e){
@@ -108,6 +116,10 @@ const chessCastle = document.getElementById('chess-castle');
 const collage = document.getElementById('collage');
 const musique = document.getElementById('musique');
 const rechauffement = document.getElementById('rechauffement');
+const dgma = document.getElementById('dgma');
+const flocons = document.getElementById('flocons');
+const popy = document.getElementById('popy');
+
 
 
 const closeModals = document.querySelectorAll('.close');
@@ -145,7 +157,21 @@ rechauffement.addEventListener('click', function(e){
    const modalRechauffement = document.querySelector('.rechauffement');
    modalRechauffement.classList.remove('hidden');   
 });
-
+dgma.addEventListener('click', function(e){
+   e.preventDefault();
+   const modalDgma = document.querySelector('.dgma');
+   modalDgma.classList.remove('hidden');   
+});
+flocons.addEventListener('click', function(e){
+   e.preventDefault();
+   const modalFlocons = document.querySelector('.flocons');
+   modalFlocons.classList.remove('hidden');   
+});
+popy.addEventListener('click', function(e){
+   e.preventDefault();
+   const modalPopy = document.querySelector('.popy');
+   modalPopy.classList.remove('hidden');   
+});
 //-------------------------------CLOSE MODAL---------------------------------
 for(closeModal of closeModals){
 closeModal.addEventListener('click', function(e){
